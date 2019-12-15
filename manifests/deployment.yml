@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gidovexamples 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gidovexamples 
+    spec:
+      containers:
+        - name: gidovexamples 
+          image: gvkaks.azurecr.io/gidovexamples
+          ports:
+          - containerPort: 7000
